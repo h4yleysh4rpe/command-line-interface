@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Command Line Interface</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <form class="cmdfield">
+        <input type="text" id="txt" name="fname" />
+        <input type="submit" value="Run command" id="btn" /><br />
+      </form>
+    </div>
+    <div class="middle">
+      <div class="column1">
+        <form>
+          <p>INPUT</p>
+          <textarea class="textbox" name="in" id="in"></textarea><br />
+        </form>
+      </div>
+      <div class="column2">
+        <form>
+          <p>OUTPUT</p>
+          <textarea class="textbox" name="out" id="out"></textarea>
+        </form>
+      </div>
+    </div>
+    <script src="main.js" defer></script>
+  </body>
+</html>

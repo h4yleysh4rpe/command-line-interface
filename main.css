@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* outline: solid 1px blue; /* Temporary outlines are great when making layouts */
+}
+
+body {
+  background-color: #daf0ee;
+}
+
+.header {
+  background-color: #7f9f99;
+  text-align: center;
+  height: 10vh;
+  padding: 2vw;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80%;
+  align-items: stretch;
+}
+
+#btn {
+  border-radius: 5px;
+  font: Helvetica;
+}
+
+#btn:hover {
+  background-color: #daf0ee;
+  transition: 0.2s ease-out;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cmdfield {
+  padding: 0.5vw;
+}
+.column1 {
+  flex: 1;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.column2 {
+  flex: 1;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.textbox {
+  width: 90%;
+}
+
+input {
+  background-color: #9db5b2;
+  color: 739691;
+}
+
+p {
+  color: #0b2d32;
+  margin: 1.5vw 1.5vw 0 1.5vw;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+textarea {
+  background-color: #9db5b2;
+  color: #0b2d32;
+  height: 80vh;
+  width: 90%;
+  max-width: 100%;
+  resize: none;
+  margin: 0 1.5vw 1.5vw 1.5vw;
+}
