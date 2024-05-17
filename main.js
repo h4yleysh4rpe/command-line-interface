@@ -20,9 +20,17 @@ function onclick(event) {
   if (command[0] == "add") {
     out = add(...command);
   }
-
-  if (command[0] == "sub") {
+  else if (command[0] == "sub") {
     out = sub(...command);
+  }
+  else if (command[0] == "copy") {
+    out = copy(...command);
+  }
+  else if (command[0] == "mult") {
+    out = mult(...command);
+  }
+  else {
+    out = badInput(...command);
   }
 }
 
@@ -36,6 +44,22 @@ function sub(...args) {
   logOutput(String(+args[1] - +args[2]));
 }
 
+function copy(...args) {
+  user_input = getInput();
+  document.getElementById("out").value = user_input;
+}
+
+function mult(...args) {
+  user_input = logInput(...args);
+  logOutput(String(+args[1] * +args[2]));
+}
+
+function badInput(...args) {
+  var txt = document.getElementById("out");
+  var badFn = args[0];
+  txt.value = "The function " + badFn + " does not exist. Try again."
+}
+
 function logInput(...args) {
   // want to tell the user what command they have executed.
   var txt = document.getElementById("in");
@@ -45,4 +69,9 @@ function logInput(...args) {
 function logOutput(num) {
   var txt = document.getElementById("out");
   txt.value = `The result is ${+num}`;
+}
+
+function getInput() {
+  var txt = document.getElementById("in").value;
+  return txt;
 }
